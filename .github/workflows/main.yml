@@ -25,8 +25,7 @@ jobs:
           
       - name: Checks out dist
         uses: actions/checkout@v2
-      - name: Use local my-action
-        uses: https://github.com/pavankumar9740/dashboard13/
+      
         with:
           path: |
             dist
