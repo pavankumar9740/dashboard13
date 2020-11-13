@@ -26,7 +26,7 @@ jobs:
       - name: Checks out dist
         uses: actions/checkout@v2
       - name: Use local my-action
-        uses: ./.github/actions/my-action
+        uses: ./.github/workflows
         with:
           path: |
             dist
