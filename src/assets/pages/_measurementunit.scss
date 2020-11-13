@@ -1,0 +1,33 @@
+
+.add-unit{
+.form-check.form-check-inline{
+    label{
+        &.label-coilsize{
+        font-size: 14px;
+        }
+        
+    }
+}
+.form-check.custom-control.custom-switch{
+    label{
+        &.custom-control-label{
+            font-size: 14px;
+        }
+    }
+
+}
+}
+#addMeasurement, #editMeasurement {
+    .modal-dialog {
+      max-width: 650px;
+    }
+    .form-check-inline {
+        width: 100%;
+        input {
+            width: 100%;
+        }
+    }
+  }
+.wid-60{width:550px;}
+.wid-50{width:350px;}
+.wid-40{width:250px;}

@@ -1,0 +1,196 @@
+.card.mb-1 {
+  margin-bottom: 1px !important;
+}
+.productManagement .w-100{
+	&:first-child {
+		.card-header {
+			border-top: 1px solid rgba(4, 72, 132, 0.125);
+		}
+	}
+}
+.card-header {
+  padding: 0;
+  outline: 0px;
+	border-right: 1px solid rgba(4, 72, 132, 0.125);
+	border-left: 1px solid rgba(4, 72, 132, 0.125);
+	table {
+		border: 0px;
+	}
+  &.not-collapsed {
+    background: $accSelected;
+    .table {
+		background: $accSelected;
+		td, th {
+		  background: $accSelected;          
+		}
+	  }
+	  .float-right {
+		img {
+		  transform: rotate(180deg);
+		}
+	  }
+  }
+  .wid-100 {
+	  width: 100px;
+  }
+  .table {
+    margin: 0;
+    tr {    
+      td, th {
+        padding: 8px 25px 8px 0;
+        border-radius: 5px;
+        background: #fff;
+        background-color: $white;
+        vertical-align: middle;
+        &.coil-size, &.status {
+          width: 28%;
+        }
+		label {
+			margin: 0;
+		}
+		&:nth-child(1) {
+			padding-left: 25px;
+		}
+      }
+      th {
+        text-transform: uppercase;
+      }    
+    }
+  }
+}
+header {
+  .card-header {
+    border: 0;
+  }
+}
+.dot{
+  border: 0;
+  border-top: 1px dashed #b7b7b7;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+.green-col{
+background: #eef7fa;
+}
+.td-mt{
+  border-top:none !important;
+}
+.wid-350{
+  width:50%;
+}
+.layout-secondary thead {
+     background-color: #d7dfe6;
+    color: #464646;
+}
+
+.layout-secondary thead th {
+    border-bottom: none;
+}
+
+.layout-secondary.bordered {
+    border: 1px solid #ddd;
+}
+#addNewProduct, .productManagement {
+  .modal-dialog {
+    max-width: 1000px;
+  }
+  .collapse {
+	border-bottom: 1px solid rgba(4, 72, 132, 0.125);
+  }
+  .info-coil, .collapse {
+    .col-md-12 {
+      padding: 0;
+    }
+    .col-sm-3, .col-sm-4, .col-sm-2 {
+      padding: 5px 0;
+    }
+  }
+  .card {
+	  border: 0px;
+	  width: 100%;
+  }
+  .dot {
+	border-top: 1px dashed #b7b7b7;
+	margin: 30px 0;
+	}
+}
+#addNewProduct {
+	.dot {
+		margin: 20px 0;
+	}
+	.btn.btn-lg, .btn-group-lg > .btn {
+		min-width: 150px;
+		padding: 13px 20px;
+		font-size: 14px;
+	}
+}
+.wid-100 {
+	width: 70px !important;
+}
+.card-body, #addNewProduct {
+	h6 {
+		text-transform: uppercase;
+		color: #32383b;
+		font-weight: bold;
+		font-size: 16px;
+	}
+	.btn-link {
+		font-weight: bold;
+		font-size: 14px;
+		margin: 0px;
+		padding: 0;
+	}
+	.form-group {
+		margin: 0px;
+	}
+}
+@media only screen and (max-width: 950px) {
+	.card-body, #addNewProduct {
+		.p-3.ml-5.mr-5.p-20 {
+			margin: 0 !important;
+			padding: 0 !important;
+		}
+	}
+}
+@media only screen and (max-width: 700px) {
+	#addNewProduct .card, .productManagement {
+		margin: 0;		
+		table {
+			min-width: 600px;
+		}
+		.card-header {
+			table {
+				min-width: auto;
+				tr {
+					td, th {
+						padding: 8px 5px;
+					}
+					td:nth-child(1), th:nth-child(1) {
+						padding: 8px 5px;
+					}
+					.wid-100 {
+						width: 22px !important;
+					}
+				}
+			}
+		}
+	}
+	#addNewProduct, .productManagement {
+		.green-col {
+			padding: 0 10px;
+		}
+		.col-sm-6 {
+			padding: 0;
+		}
+	  .info-coil, .collapse {
+		.col-sm-3, .col-sm-4, .col-sm-2, .col-sm-6 {
+		  padding: 0;
+		}
+		.col-sm-9, .col-sm-5 {
+			padding: 0;
+		}
+	  }
+	  
+	}
+}

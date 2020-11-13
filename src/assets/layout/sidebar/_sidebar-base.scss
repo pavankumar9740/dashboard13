@@ -1,0 +1,135 @@
+// Sidebar Base
+
+// Variables
+$primaryColor: #4285f4 !default;
+$baseBg: #2a2a2e !default;
+$darkenBg: darken($baseBg, 5%) !default;
+$lightenBg: lighten($baseBg, 5%) !default;
+
+$itemColor: #fff !default;
+
+$itemOpenColor: #fff !default;
+$itemOpenBg: $primaryColor !default;
+
+
+
+.app-sidebar {
+  display: flex;
+  z-index: 20;
+  width: $app-sidebar-width;
+  position: fixed;
+  height: 100vh;
+  flex-direction: column;
+  transition: all .3s ease;
+  padding: $app-header-height 0 0;   
+
+  .app-header__logo {
+    padding: 0;
+    height: $app-header-height;
+    width: $app-sidebar-width;
+    display: flex;
+    align-items: center;
+    transition: width .2s;
+    flex-shrink: 0;
+    position: absolute;
+    border-bottom: 1px solid #c0c7cb;
+    border-right: 1px solid #c0c7cb;
+    background: $white;
+    top: 0;
+    left: 0;
+  }
+
+  .app-sidebar-content {
+    flex-grow: 1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #c0c7cb;
+    background: $white;
+    .app-sidebar-scroll {
+      width: 100%;
+    }
+  }
+  .header__show {
+    display: none;
+  }
+  .menu-list {
+    ul {
+      li{        
+        position: relative;        
+        transition: all 0.5s ease;
+        overflow: hidden;
+        &.active {
+          background: #f2f6f9;
+          border-left: 5px solid #3c6cf5;
+          a {
+            left: 0;
+          }
+        }
+        a {
+          display: flex;
+          padding: 15px 20px;          
+          position: relative;
+          width: 200%;
+          transition: all 0.5s ease;
+		  left: -60px;
+		  span {
+			display: block;
+			width: 84px;
+		  }
+        }
+        &:hover {
+          border-left: 5px solid #3c6cf5;
+          a {
+            left: 0;
+          }          
+        }
+      }
+    }
+  }  
+}
+
+@import "modifiers/closed-sidebar";
+
+@media only screen and (max-width: 950px) {
+	.app-sidebar {
+		.app-sidebar-content {
+			width: 0;
+			transition: all .3s ease;
+		}
+	}	
+	.app-container {
+		.app-main__outer {
+			padding: 77px 0 0 0;
+		}
+		.app-main__inner {
+			padding: 20px 15px;
+		}
+	}
+	.closed-sidebar {
+		.app-sidebar-content {
+			width: 84px;
+			transition: all .3s ease;
+		}
+	}
+	.table-responsive {
+		width: calc(100% + 30px);
+		margin: 0 -15px;
+	}
+	.search-wrapper.active {
+		position: absolute;
+		left: 0;
+		top: 78px;
+		z-index: 13;
+		padding: 10px;
+		width: 100% !important;
+		background: #fff;
+	}
+	.header-section {
+		.float-left {
+			width: 100%;
+		}
+	}
+}
+
+

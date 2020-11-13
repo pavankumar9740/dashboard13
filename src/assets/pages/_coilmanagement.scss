@@ -1,0 +1,226 @@
+// User Pages
+.header-section {
+  width: 100%;
+  float: left;
+  padding: 0 0 20px 0;
+  .btn {
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.24);
+    padding: 10px 0;
+    height: 50px;
+    font-size: 15px;
+	text-align: right;
+  }
+  h1 {
+    font-size: 34px;
+    color: $headingtext;
+  }
+}
+.coilmanagement.table {
+  tr {    
+    td, th {
+      padding: 15px 25px;
+      border-radius: 5px;
+      background: #fff;
+      background-color: $white;
+    }
+    th {
+      text-transform: uppercase;
+    }
+  }  
+}
+
+.info-coil-container {
+	position: relative;
+	display: inline-block;
+	.dropdown-menu {
+	  position: absolute;
+	  max-width: 272px;
+	  width: 272px;
+	  margin: 0;
+	  padding: 0;
+	  left: -300px !important;
+	  top: -43px !important;
+	  background-color: $white;
+	  box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.24);
+	  transform: translate3d(0px, 0px, 0px) !important;
+	  border: 1px solid #118af7;
+	  .modal-header {
+		background-color: $white;
+		padding: 5px 10px;
+	  } 
+	}
+	.modal-header h5 {
+		font-size: 16px;
+	}
+	.modal-body {
+		padding: 10px;
+	}
+	.modal-content {
+		border-radius: 10px;
+		border: none;
+	}
+	.dropdown-toggle {
+		background: none !important;
+		padding: 0;
+		margin: 0;
+		border: 0px;
+		&:after {
+			display: none;
+		}
+	}
+}
+.info-coil {
+position: relative;
+.right-arrow {
+  background: url(/img/icons/info-arrow.jpg);
+  width: 26px;
+  height: 38px;
+  position: absolute;
+  right: -21px;
+  z-index: 10;
+  top: 43px;
+}
+
+.tab-container {
+  .tabs {
+	ul {
+	  margin: 0;
+	  border-bottom: 1px solid #ebebeb;
+	  
+	  li {
+		float: left;
+		font-size: 13px;
+		width: 50%;
+		color: $importedicon; 
+		margin-right: 10px;
+		img{
+		  padding-right: 6px;
+		}        
+		a {
+		  text-decoration: none;
+		  color: $domesticicon;
+		  cursor: pointer;
+		  display: block;
+		  border-bottom: 2px solid $white;
+		  &.active {
+			border-bottom: 4px solid $domesticicon;
+			padding-bottom: 4px;
+		  }
+		}
+		&:nth-child(2) {
+			a {
+			  text-decoration: none;
+			  color: $importedicon;
+			  cursor: pointer;
+			  display: block;
+			  border-bottom: 2px solid $white;
+			  &.active {
+				border-bottom: 4px solid $importedicon;
+				padding-bottom: 4px;
+			  }
+			}
+		}
+	  }
+	} 
+  }
+  .reel-list {
+	li {
+	  border-bottom: 1px solid #ebebeb;
+	  padding: 4px 0px;
+	  font-size: 13px;
+	  img {
+	  padding-right: 10px;
+	  }
+	}
+  }
+}
+}
+  
+.add-coil, .edit-coil, .deactive {
+  &.is-active {
+    display: block;
+  }
+  .modal-header{
+    background-color: $white;
+    h5.modal-title {
+      padding: 0px 0px;
+        color: $listheading;
+        font-weight: bold;
+        font-size: 12px;
+        
+    }
+  }
+  .form-row{
+    h5{
+      color: $listheading;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 10px 0px;
+    }
+    .form-check{
+      width: 100%;
+      label{
+        color: $listheading;
+        font-size: 12px;
+        &.label-coilsize{
+          width: 25%; 
+        }
+      }
+        Input.form-check-input{
+          width:15px;
+          height: 15px; 
+        }
+    }
+  }
+}
+#addNewReel, #editReel {
+  .modal-dialog {
+    max-width: 650px;
+  }
+  .form-check-inline {
+    width: 100%;
+    input {
+        width: 100%;
+    }
+  }
+}
+
+.wid-340{
+  width:45%;
+}
+@media only screen and (min-width: 1300px) {
+  .wid-340{
+	  width:40%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .wid-340{
+	  width:50%;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .wid-340{
+	  width:60%;
+  }
+  .coilmanagement.table {
+	  tr {    
+		td, th {
+		  padding: 15px 10px;
+		 }
+	  }
+	  min-width: 630px;
+	}
+	button.btn.btn-lg.info, .btn-group-lg > button.btn.info, button.btn.btn-lg.editicon, .btn-group-lg > button.btn.editicon {
+		margin-right: 10px;
+		padding: 10px 10px 10px 36px;
+		text-align: left;
+		min-width: 92px;
+	}
+	button.btn.btn-lg.deactivate, .btn-group-lg > button.btn.deactivate {
+		margin-right: 0;
+		min-width: 129px;
+	}
+	.header-section h1 {
+		font-size: 26px;
+	}
+}
