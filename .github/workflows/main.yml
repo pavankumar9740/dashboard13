@@ -23,7 +23,6 @@ jobs:
           
       - name: Checks out dist
         uses: actions/checkout@v2
-      
         with:
           path: |
             dist
