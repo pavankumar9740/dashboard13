@@ -11,7 +11,7 @@ on:
       - master
 
 jobs:
-  build_and_test:
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -27,6 +27,12 @@ jobs:
         with:
           path: |
             dist
+            !dist/**/*.md
+      - name: curl
+        uses: wei/curl@v1
+        with:
+         args: -X POST -u deployuser:pavankumar9740 https://dev-authss.scm.azurewebsites.net/api/zipdeploy -T OrderMgmt1.zip
+       
 
       
         
